@@ -5,11 +5,18 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* COMMONS */
 .app-wrapper{
     background-color: #009587;
     height: 100vh;
     padding: 5rem 10rem;
+}
+
+.flexcontain{
     display: flex;
     flex-direction: row;
 }
@@ -18,6 +25,20 @@
 .chat-head{
     height: 80px;
     background-color: #eaeaea;
+    padding: 0.5rem 1rem;
+}
+
+.propic {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.padding-l {
+    padding-left: 10px;
+}
+
+ul{
+    list-style: none;
 }
 
 /* CONTACTS */
@@ -26,6 +47,88 @@
     height: 100%;
     width: 35%;
     border-right: 1px solid lightgray;
+}
+
+.user-action-standard,
+.user-name{
+    width: 50%;
+}
+
+.user-name img{
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-name div{
+    align-self: center;
+    font-weight: bold;
+}
+
+.user-action-standard ul{
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.user-action-standard ul li a{
+    color: #b1b1b1;
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+
+.banner-notifiche{
+    background-color: #8edafb;
+    height: 60px;
+    padding: 0.5rem;
+}
+
+.banner-notifiche .bell{
+    border-radius: 50%;
+    background-color: white;
+    color: lightgray;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.notify-text{
+    width: 70%;
+    margin-left: 15px;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+.input{
+    width: 100%;
+    height: 42px;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: 0 1rem;
+}
+
+.input i{
+   font-size: 1.2rem;
+   background-color: white;
+   padding: 0.2rem;
+}
+
+.input input{
+    width: 90%;
+    background-color: white;
+    padding: 0.3rem;
+    border: none;
+}
+
+/* LIST CONTACT */
+.contact-padding {
+    padding: 5px;
+    border-bottom: solid #f5f5f5 1px;
+}
+.active {
+    background-color: #e9ebea;
 }
 
 /* CHAT COL */

@@ -41,6 +41,11 @@ ul{
     list-style: none;
 }
 
+.flex-info{
+    display: flex;
+    flex-direction: column;
+}
+
 /* CONTACTS */
 .contacts-col{
     background-color: white;
@@ -136,4 +141,65 @@ ul{
     background-color: white;
     height: 100%;
     width: 65%;
+}
+
+.chat-head{
+    justify-content: space-between;
+}
+
+/* MESSAGES */
+.received {
+    width: 40%;
+    min-width: 35%;
+    display: block;
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.sent {
+    width: 40%;
+    min-width: 35%;
+    display: block;
+    background-color: #d5f9ba;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+/* CONVERSAZIONE */
+.back-ground-chat{
+    /* background-image: url(../img/mine.jpg); */
+}
+
+.chat {
+    margin-top: 60px;
+}
+
+.inner-chat {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.received {
+    width: 40%;
+    min-width: 35%;
+    display: block;
+    background-color: white;
+    padding: 10px;
+    border-radius: 12px;
+}
+.sent {
+    width: 40%;
+    min-width: 35%;
+    display: block;
+    background-color: #d5f9ba;
+    padding: 10px;
+    border-radius: 12px;
+}
+.times {
+    color: lightgray;
+    font-size: 9px;
+}
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
 }

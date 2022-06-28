@@ -4,3 +4,33 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* COMMONS */
+.app-wrapper{
+    background-color: #009587;
+    height: 100vh;
+    padding: 5rem 10rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.contacts-head,
+.chat-head{
+    height: 80px;
+    background-color: #eaeaea;
+}
+
+/* CONTACTS */
+.contacts-col{
+    background-color: white;
+    height: 100%;
+    width: 35%;
+    border-right: 1px solid lightgray;
+}
+
+/* CHAT COL */
+.chat-col{
+    background-color: white;
+    height: 100%;
+    width: 65%;
+}

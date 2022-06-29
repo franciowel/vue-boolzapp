@@ -1,0 +1,240 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* COMMONS */
+.app-wrapper{
+    background-color: #009587;
+    height: 100vh;
+    padding: 5rem 10rem;
+}
+
+.flexcontain{
+    display: flex;
+    flex-direction: row;
+}
+
+.contacts-head,
+.chat-head{
+    height: 80px;
+    background-color: #eaeaea;
+    padding: 0.5rem 1rem;
+}
+
+.propic {
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+}
+
+.padding-l {
+    padding-left: 10px;
+}
+
+ul{
+    list-style: none;
+}
+
+.flex-info{
+    display: flex;
+    flex-direction: column;
+}
+
+/* CONTACTS */
+.contacts-col{
+    background-color: white;
+    height: 100%;
+    width: 35%;
+    border-right: 1px solid lightgray;
+}
+
+.user-action-standard,
+.user-name{
+    width: 50%;
+}
+
+.user-name img{
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-name div{
+    align-self: center;
+    font-weight: bold;
+}
+
+.user-action-standard ul{
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.user-action-standard ul li a{
+    color: #b1b1b1;
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+
+.banner-notifiche{
+    background-color: #8edafb;
+    height: 60px;
+    padding: 0.5rem;
+}
+
+.banner-notifiche .bell{
+    border-radius: 50%;
+    background-color: white;
+    color: lightgray;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.notify-text{
+    width: 70%;
+    margin-left: 15px;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+.input{
+    width: 100%;
+    height: 42px;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: 0 1rem;
+}
+
+.input i{
+   font-size: 1.2rem;
+   background-color: white;
+   padding: 0.2rem;
+}
+
+.input input{
+    width: 90%;
+    background-color: white;
+    padding: 0.3rem;
+    border: none;
+}
+
+/* LIST CONTACT */
+.contact-padding {
+    padding: 5px;
+    border-bottom: solid #f5f5f5 1px;
+}
+
+.active {
+    background-color: #e9ebea;
+}
+
+/* CHAT COL */
+.chat-col{
+    background-image: url(../img/mine.jpg);
+    height: 100%;
+    width: 65%;
+    position: relative;
+}
+
+.chat-head{
+    justify-content: space-between;
+}
+
+.menu-chat-up li{
+    padding: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.menu-chat-up ul{
+    align-self: center;
+}
+
+/* MESSAGES */
+.received {
+    width: 40%;
+    min-width: 35%;
+    display: block;
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 0.3rem;
+}
+
+.sent {
+    width: 40%;
+    min-width: 35%;
+    display: block;
+    background-color: #d5f9ba;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 0.3rem;
+}
+
+/* CONVERSAZIONE */
+.chat {
+    margin-top: 60px;
+}
+
+.inner-chat {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.received {
+    width: 40%;
+    min-width: 35%;
+    display: block;
+    background-color: white;
+    padding: 10px;
+    border-radius: 12px;
+}
+.sent {
+    width: 40%;
+    min-width: 35%;
+    display: block;
+    background-color: #d5f9ba;
+    padding: 10px;
+    border-radius: 12px;
+}
+.times {
+    color: lightgray;
+    font-size: 9px;
+}
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* TEXTBAR */
+.text-bar{
+    flex-direction: row;
+    background-color: #f3eeea;
+    height: 65px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.text-bar a{
+    width: 10%;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #6b7477;
+    align-self: center;
+}
+
+.text-bar input{
+    width: 75%;
+    height: 30px;
+    align-self: center;
+}

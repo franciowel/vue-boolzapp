@@ -69,15 +69,15 @@
                 <!-- INPUT RICERCA -SUCCESSIVAMENTE CON FILTER -->
                 <div class="input flexcontain">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" name="userFilter" id="userFilter" placeholder="           Cerca o inizia nuova chat">
+                    <input type="text" name="userFilter" id="userFilter" placeholder="Cerca o inizia nuova chat">
                 </div>
 
                 <!-- QUI CI SARANNO I NOSTRI CONTATTI/AMICI -->
                 <ul class="user-list">
-                    <li v-for="contacts, index in contacts" class="contact-padding active">
+                    <li v-for="contacts, index in contacts" class="contact-padding" @click="openNewChat(index)" :class="currentActiveChat === index ? 'active' : '' ">
                         <div class="flexcontain">
                             <div>
-                                <img class="propic" v-bind:src="'img/avatar' + contacts.avatar + '.jpg'" alt="avatar 1">
+                                <img class="propic" v-bind:src="'img/avatar' + contacts.avatar + '.jpg'" alt="contact.name">
                             </div>
                             <div>
                                 <span class="padding-l">
@@ -132,7 +132,7 @@
                                     {{ message.text }}
                                 </div>
                                 <div class="text-right times">
-                                    { message.date }}
+                                    {{ message.date }}
                                 </div>
                             </span>
                         </div>

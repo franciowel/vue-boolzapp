@@ -86,11 +86,12 @@ var app = new Vue({
                     }
                 ],
             },
-        ]
+        ],
     },
     methods:{
-        openNewChat(ChatIndex) {
-            this.currentActivechat = chatIndex
+        openNewChat(chatIndex) {
+            this.currentActiveChat = chatIndex
         }
     }
+
 })

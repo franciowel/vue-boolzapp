@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- QUI INIZIA L'APPLICAZIONE -->
+    <div id="root">
+
+        <div class="app-wrapper flexcontain">
+
+            <!-- QUI CI SARANNO I TUOI CONTATTI CON CUI CHATTARE -->
+            <div class="contacts-col">
+
+                <div class="contacts-head flexcontain">
+                    <!-- TUO PROFILO -->
+                    <div class="user-name flexcontain">
+                        <img src="img/avatar_io.jpg" alt="Profile Pic Mine">
+                        <div>Nome Utente</div>
+                    </div>
+
+                    <div class="user-action-standard">
+                        <ul class="flexcontain">
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-circle-notch"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-message"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- MANAGE NOTIFICATIONS -->
+                <div class="banner-notifiche flexcontain">
+                    <div class="bell flexcontain">
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div>
+                    <div class="notify-text">
+                        <p>
+                            Ricevi notifiche di nuovi messaggi.
+                        </p>
+                        <span>
+                            <a href="#">Attiva notifiche adesso.</a>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- INPUT RICERCA -SUCCESSIVAMENTE CON FILTER -->
+                <div class="input flexcontain">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" name="userFilter" id="userFilter" placeholder="           Cerca o inizia nuova chat">
+                </div>
+
+                <!-- QUI CI SARANNO I NOSTRI CONTATTI/AMICI -->
+                <ul class="user-list">
+                    <li v-for="contacts, index in contacts" class="contact-padding active">
+                        <div class="flexcontain">
+                            <div>
+                                <img class="propic" v-bind:src="'img/avatar' + contacts.avatar + '.jpg'" alt="avatar 1">
+                            </div>
+                            <div>
+                                <span class="padding-l">
+                                    {{ contacts.name }}
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            
+            <!-- QUI VERRANNO MOSTRATE LE CHAT -->
+            <div class="chat-col">
+
+                <div class="chat-head flexcontain">
+                    
+                    <div class="flexcontain">
+                        <img :src="'img/avatar' + contacts[currentActiveChat].avatar + '.jpg'" alt="avatar" class="propic">
+                        <div class="flex-info">
+                            <span class="padding-l">
+                                {{contacts[currentActiveChat].name}}
+                            </span>
+                            <span class="padding-l">
+                                [ULTIMO ACCESSO]
+                            </span>
+                        </div>
+                    </div>
+                    <div class="menu-chat-up flexcontain">
+                        <ul class="flexcontain">
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-paperclip"></i>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="back-ground-chat">
+                    <!-- QUI CI SARA LA CONVERSAZIONE -->
+                    <div class="chat">
+                        <!-- INIZIO TEMPL MEX -->
+                        <div class="inner-chat" v-for="message in contacts [currentActiveChat].messages" :class="message.status === 'sent' ? 'flex-end' : '' ">
+                            <span :class="message.status === 'sent' ? 'sent' : 'received' ">
+                                <div>
+                                    {{ message.text }}
+                                </div>
+                                <div class="text-right times">
+                                    { message.date }}
+                                </div>
+                            </span>
+                        </div>
+                        <!-- FINE TEMPLATE MEX -->
+                
+                    </div>
+                    
+                </div>
+
+                <!-- TYPE YOUR TEXT -->
+                <div class="text-bar flexcontain">
+
+                    <a href="#">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </a>
+
+                    <input type="text" placeholder="Scrivi un messaggio">
+
+                    <a href="#">
+                        <i class="fa-solid fa-microphone"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            
+        </div>
+
+    </div>
+    
+
+</body>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+</html>

@@ -31,6 +31,7 @@ body{
 .propic {
     width: 50px;
     border-radius: 50%;
+    height: 50px;
 }
 
 .padding-l {
@@ -138,9 +139,10 @@ ul{
 
 /* CHAT COL */
 .chat-col{
-    background-color: white;
+    background-image: url(../img/mine.jpg);
     height: 100%;
     width: 65%;
+    position: relative;
 }
 
 .chat-head{
@@ -167,10 +169,6 @@ ul{
 }
 
 /* CONVERSAZIONE */
-.back-ground-chat{
-    /* background-image: url(../img/mine.jpg); */
-}
-
 .chat {
     margin-top: 60px;
 }
@@ -202,4 +200,29 @@ ul{
 .flex-end {
     display: flex;
     justify-content: flex-end;
+}
+
+/* TEXTBAR */
+.text-bar{
+    flex-direction: row;
+    background-color: #f3eeea;
+    height: 65px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.text-bar a{
+    width: 10%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6b7477;
+    align-self: center;
+}
+
+.text-bar input{
+    width: 75%;
+    height: 30px;
+    align-self: center;
 }

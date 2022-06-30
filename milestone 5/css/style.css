@@ -47,6 +47,17 @@ ul{
     flex-direction: column;
 }
 
+.username-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lastseen{
+    font-size: 0.9rem;
+    color: gray;
+}
+
 /* CONTACTS */
 .contacts-col{
     background-color: white;
@@ -178,6 +189,11 @@ ul{
     padding: 10px;
     border-radius: 12px;
     margin: 0.3rem;
+}
+
+.lastmex{
+    font-size: 0.8rem;
+    color: gray;
 }
 
 /* CONVERSAZIONE */

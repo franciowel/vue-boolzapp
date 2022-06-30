@@ -81,9 +81,14 @@
                                 <img class="propic" v-bind:src="'img/avatar' + contacts.avatar + '.jpg'" alt="contact.name">
                             </div>
                             <div>
+                                <!-- NOME UTENTE -->
                                 <span class="padding-l">
                                     {{ contacts.name }}
                                 </span>
+                                <!-- ULTIMO MESSAGGIO UTENTE -->
+                                <div class="lastmex padding-l">
+                                    {{sliceMessage(contacts.messages[contacts.messages.length - 1].text)}}
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -98,12 +103,12 @@
                     
                     <div class="flexcontain">
                         <img :src="'img/avatar' + contacts[currentActiveChat].avatar + '.jpg'" alt="avatar" class="propic">
-                        <div class="flex-info">
+                        <div class="username-info">
                             <span class="padding-l">
                                 {{contacts[currentActiveChat].name}}
                             </span>
-                            <span class="padding-l">
-                                [ULTIMO ACCESSO]
+                            <span class="lastseen padding-l">
+                                Ultimo accesso oggi alle {{ lastSeen }}
                             </span>
                         </div>
                     </div>

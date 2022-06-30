@@ -3,6 +3,7 @@ var app = new Vue({
     data: {
         userFilterText: '',
         currentActiveChat: 0,
+        lastSeen : dayjs().format('HH:mm'),
         newMessage: {
             text: '',
             status: 'sent',
@@ -110,7 +111,7 @@ var app = new Vue({
               status: 'sent',
               date: 'test'
             }
-            setTimeout(this.response, 5000)
+            setTimeout(this.response, 3000)
         },
         response() {
             this.contacts[this.currentActiveChat].messages.push(this.newBotMessage)
@@ -125,7 +126,15 @@ var app = new Vue({
                   element.visible = false;
               }
             });
-          }
+        },
+        sliceMessage(msg) {
+            let shortMsg = msg;
+            if(msg.length > 23){
+              shortMsg = msg.slice(0, 24) + "..";
+            }
+            return shortMsg
+        }
+          
           
     }
 
